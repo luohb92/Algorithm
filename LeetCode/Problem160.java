@@ -1,9 +1,11 @@
-import java.util.HashSet;
-import Problem203.ListNode;
 /**
  * LeetCode第160题
  * 编写一个程序，找到两个单链表相交的起始节点。
  */
+package LeetCode;
+import java.util.HashSet;
+import java.util.Set;
+
 public class Problem160 {
     public static void main(String[] args) {
         
@@ -13,7 +15,6 @@ public class Problem160 {
      * 暴力解法
      * 遍历headA中的节点看是否在headB中
      * O(mn) 的时间，O(1) 的空间
-     * @param args
      */
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
         for(ListNode headA1 = headA; headA1 != null; headA1= headA1.next) {
@@ -42,7 +43,7 @@ public class Problem160 {
         Set<ListNode> set = new HashSet<>();
         while (ha != null){
             set.add(ha);
-            ha = ha.next
+            ha = ha.next;
         }
         while(hb != null) {
             if(set.contains(hb)) {

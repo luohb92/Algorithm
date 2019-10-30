@@ -1,29 +1,28 @@
+package offer;
+
 public class Problem19 {
     public static void main(String[] args) {
-        
+
     }
 
-    //递归遍历树的节点，只有当前节点为null
-    //或者该节点左子节点和右子节点为null才不要交互左右子节点
-    //交换当前节点的左右子节点，然后递归遍历该节点的左右子节点
-    public void Mirror(TreeNode root) {
-        if(root == null) {
-            return;
+    public ListNode deleteDuplication(ListNode head) {
+        if (head == null || head.next == null) {
+            return head;
         }
-        if(root.left == null && root.right == null) {
-            return;
-        }
+        ListNode pre = new ListNode(-1);
+        pre.next = head;
+        ListNode slow = head;
+        ListNode fast = head.next;
+        ListNode temp = pre;
+        while (fast != null) {
+            if (slow.val == fast.val) {
+                fast = fast.next;
+            } else {
 
-        TreeNode temp = root.left;
-        root.left = root.right;
-        root.right = temp;
-
-        if(root.left != null) {
-            Mirror(root.left);
+            }
         }
+        return pre.next;
 
-        if(root.right != null) {
-            Mirror(root.right);
-        }
     }
+
 }

@@ -4,6 +4,7 @@
  * 输入: 1->2->6->3->4->5->6, val = 6
  * 输出: 1->2->3->4->5
  */
+package LeetCode;
 public class Problem203 {
     public static void main(String[] args) {
         ListNode head = new ListNode(1);

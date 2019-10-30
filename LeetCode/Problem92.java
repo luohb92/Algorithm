@@ -1,5 +1,3 @@
-import Problem03.ListNode;
-
 /**
  * LeetCode第92题
  * 反转从位置 m 到 n 的链表。请使用一趟扫描完成反转。
@@ -8,7 +6,8 @@ import Problem03.ListNode;
  * 输入: 1->2->3->4->5->NULL, m = 2, n = 4
  * 输出: 1->4->3->2->5->NULL
  */
-public class Porblem92 {
+package LeetCode;
+public class Problem92 {
     public static void main(String[] args) {
         
     }

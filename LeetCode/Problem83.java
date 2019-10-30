@@ -4,6 +4,7 @@
  * 输入: 1->1->2
  * 输出: 1->2
  */
+package LeetCode;
 public class Problem83 {
     public static void main(String[] args) {
         
