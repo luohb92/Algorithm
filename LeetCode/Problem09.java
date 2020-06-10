@@ -27,4 +27,21 @@ public class Problem09 {
         }
         return cur == x;
     }
+
+    public boolean isPalindrome1(int x) {
+        if (x < 0) {
+            return false;
+        }
+        String string = String.valueOf(x);
+        int left = 0;
+        int right = string.length()-1;
+        while(left < right) {
+            if (string.charAt(left) != string.charAt(right)) {
+                return false;
+            }
+            ++left;
+            ++right;
+        }
+        return true;
+    }
 }

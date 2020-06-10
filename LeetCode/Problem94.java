@@ -18,7 +18,9 @@ public class Problem94 {
      */
     public List<Integer> inorderTraversal(TreeNode root) {
         List<Integer> result = new ArrayList<>();
-        helper(result, root);
+        if (root != null) {
+            helper(result, root);
+        }
         return result;
 
     }
