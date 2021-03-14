@@ -7,7 +7,9 @@
 package LeetCode;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 
 public class Problem217 {
     public static void main(String[] args) {
@@ -15,15 +17,17 @@ public class Problem217 {
     }
 
     public boolean containsDuplicate(int[] nums) {
-        Map<Integer, Integer> map = new HashMap<>();
-        for (int i = 0; i < nums.length; ++i) {
-            int num = nums[i];
-            if (map.containsKey(num)) {
+        if(nums.length == 0) {
+            return false;
+        }
+        Set<Integer> set = new HashSet<>();
+        for(int i = 0; i < nums.length; ++i) {
+            if(set.contains(nums[i])) {
                 return true;
             } else {
-                map.put(num, 1);
+                set.add(nums[i]);
             }
         }
-        return false;
+        return set.isEmpty();
     }
 }

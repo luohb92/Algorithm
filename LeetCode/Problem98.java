@@ -1,23 +1,21 @@
 package LeetCode;
+
 public class Problem98 {
-    public static void main(String[] args) {
-        
-    }
-
     public boolean isValidBST(TreeNode root) {
-        return bst(root, Integer.MIN_VALUE, Integer.MAX_VALUE);
+        return helper(root, null, null);
     }
 
-    public boolean bst(TreeNode root, Integer min, Integer max) {
+    private boolean helper(TreeNode root, Integer min, Integer max){
         if(root == null) {
             return true;
         }
-
-        if(root.val < min || root.val > max) {
+        if(min != null && root.val <= min) {
             return false;
         }
-        return bst(root.left, min, root.val) 
-        && bst(root.right, root.val, max);
-
+        if(max != null && root.val >= max) {
+            return false;
+        }
+        return helper(root.left, min, root.val) &&
+                helper(root.right, root.val, max);
     }
 }

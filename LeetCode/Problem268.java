@@ -19,4 +19,12 @@ public class Problem268 {
         }
         return -1;
     }
+
+    public int missingNumber1(int[] nums) {
+        int mis = nums.length;
+        for(int i = 0; i < nums.length; ++i) {
+            mis = mis ^ i ^ nums[i];
+        }
+        return mis;
+    }
 }

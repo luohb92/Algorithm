@@ -19,7 +19,7 @@ public class Problem74 {
         int n = matrix[0].length;
         int left = 0;
         int right = m * n -1;
-        while(left < right) {
+        while(left <= right) {
             int mid = (left + right + 1) >> 1;
             if(matrix[mid / n ][mid % n ] > target) {
                 right = mid -1;

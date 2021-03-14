@@ -7,17 +7,19 @@ public class Problem88 {
 
     }
     public void merge(int[] nums1, int m, int[] nums2, int n) {
-        int[] nums_copy  = new int[m];
-        System.arraycopy(nums1, 0, nums_copy, 0, m);
-        int p = 0, p1 = 0, p2 = 0;
-        while (p1 < m && p2 < n) {
-            nums1[p++] = nums_copy[p1] < nums2[p2] ? nums_copy[p1++]: nums2[p2++];
+        int len1 = m -1;
+        int len2 = n -1;
+        int len = m + n -1;
+        while(len1 >= 0 && len2 >= 0) {
+            if(nums1[len1] > nums2[len2]) {
+                nums1[len] = nums1[len1];
+                --len1;
+            } else {
+                nums1[len] = nums2[len2];
+                --len2;
+            }
+            --len;
         }
-        if (p1 < m) {
-            System.arraycopy(nums_copy, p1, nums1, p1+p2, m+n-p1-p2);
-        }
-        if (p2 < n) {
-            System.arraycopy(nums2, p2, nums1, p1+p2, m+n-p1-p2);
-        }
+        System.arraycopy(nums2, 0, nums1, 0, len2 + 1);
     }
 }

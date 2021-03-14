@@ -11,30 +11,24 @@ public class Problem28 {
 
     }
 
-    /**
-     * 前序遍历根左右
-     * 对称的前序遍历根右左
-     * 如果两个序列相同则是对称树
-     * @param root
-     * @return
-     */
     public boolean isSymmetric(TreeNode root) {
-        return helper(root, root);
-    }
-
-    public boolean helper(TreeNode root1, TreeNode root2) {
-        if (root1 == null && root2 == null) {
+        if(root == null) {
             return true;
         }
-        if (root1 == null || root2 == null) {
-            return false;
-        }
+        return helper(root.left, root.right);
+    }
 
-        if (root1.val != root2.val) {
+    private boolean helper(TreeNode left, TreeNode right) {
+        if(left == null && right == null) {
+            return true;
+        } else if(left == null && right != null) {
+            return false;
+        } else if(left != null && right == null) {
+            return false;
+        } else if(left.val != right.val) {
             return false;
         }
-        return helper(root1.left, root2.right) &&
-                helper(root1.right, root2.left);
+        return helper(left.left, right.right) && helper(left.right, right.left);
     }
 
 

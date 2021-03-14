@@ -25,14 +25,15 @@ public class Problem101 {
         
     }
 
-    public boolean helper(TreeNode p, TreeNode q) {
-        if(p == null && q == null) {
+    public boolean helper(TreeNode left, TreeNode right) {
+
+        if(left == null && right == null) {
             return true;
         }
-        if(p == null || q == null) {
+        if(left == null || right == null) {
             return false;
         }
-        return (p.val == q.val) && helper(p.left, q.right) && helper(p.right, q.left);
+        return (left.val == right.val ) && helper(left.left, right.right) && helper(left.right, right.left);
     }
 
     /**

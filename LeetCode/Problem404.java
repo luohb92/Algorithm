@@ -16,4 +16,17 @@ public class Problem404 {
         right.right = new TreeNode(7);
         root.right = right;
     }
+
+    public int sumOfLeftLeaves(TreeNode root) {
+        if(root == null) {
+            return 0;
+        }
+        int mid = 0;
+        if(root.left != null
+                && root.left.left == null
+                && root.left.right == null) {
+            mid = root.left.val;
+        }
+        return mid + sumOfLeftLeaves(root.left) + sumOfLeftLeaves(root.right);
+    }
 }

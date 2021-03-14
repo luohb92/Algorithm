@@ -23,10 +23,12 @@ public class Problem513 {
         queue.add(root);
         int res = root.val;
         while(!queue.isEmpty()) {
-            res = queue.peek().val;
             int size = queue.size();
             for(int i = 0; i < size; ++i) {
                 TreeNode node = queue.remove();
+                if(i == 0) {
+                    res = node.val;
+                }
                 if(node.left != null) {
                     queue.add(node.left);
                 }

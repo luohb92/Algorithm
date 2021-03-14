@@ -7,18 +7,14 @@
 package offer;
 
 public class Problem05 {
-    public static void main(String[] args) {
-
-    }
-
-    public String replaceSpaces(StringBuffer str) {
-        int length = str.length();
-        StringBuffer res = new StringBuffer();
-        for (int i = 0; i < length; ++i) {
-            if (str.charAt(i) == ' ') {
+    public String replaceSpace(String s) {
+        StringBuilder res = new StringBuilder();
+        for(int i = 0; i < s.length(); ++i) {
+            char a = s.charAt(i);
+            if(a == ' ') {
                 res.append("%20");
             } else {
-                res.append(str.charAt(i));
+                res.append(a);
             }
         }
         return res.toString();

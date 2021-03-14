@@ -26,14 +26,13 @@ public class Problem94 {
     }
     
     public void helper(List<Integer> result, TreeNode root) {
+        if(root == null) {
+            return;
+        }
         if(root != null) {
-            if(root.left != null) {
-                helper(result, root.left);
-            }
+            helper(result, root.left);
             result.add(root.val);
-            if(root.right != null) {
-                helper(result, root.right);
-            }
+            helper(result, root.right);
         }
     }
     /**

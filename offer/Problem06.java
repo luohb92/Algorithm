@@ -12,23 +12,18 @@ import java.util.List;
 import java.util.Stack;
 
 public class Problem06 {
-    public static void main(String[] args) {
-
-    }
-
-    public int[] printListReversingly(ListNode head) {
+    public int[] reversePrint(ListNode head) {
         Stack<Integer> stack = new Stack<>();
-        List<Integer> list =  new ArrayList<>();
-        while (head != null) {
-            stack.push(head.val);
-            head = head.next;
+        ListNode node = head;
+        while(node != null) {
+            stack.push(node.val);
+            node = node.next;
         }
-        while (!stack.isEmpty()) {
-            list.add(stack.pop());
-        }
-        int[] res = new int[list.size()];
-        for (int  i = 0; i < list.size(); ++i) {
-            res[i] = list.get(i);
+        int[] res = new int[stack.size()];
+        int i = 0;
+        while(!stack.isEmpty()) {
+            res[i] = stack.pop();
+            ++i;
         }
         return res;
     }

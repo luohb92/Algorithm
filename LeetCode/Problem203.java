@@ -1,43 +1,29 @@
 /**
- * LeetCode第92题
- * 删除链表中等于给定值 val 的所有节点
- * 输入: 1->2->6->3->4->5->6, val = 6
- * 输出: 1->2->3->4->5
+ 203. 移除链表元素
+ 删除链表中等于给定值 val 的所有节点。
+ 示例:
+
+ 输入: 1->2->6->3->4->5->6, val = 6
+ 输出: 1->2->3->4->5
  */
 package LeetCode;
 public class Problem203 {
     public static void main(String[] args) {
-        ListNode head = new ListNode(1);
-        head.next = new ListNode(2);
-        head.next.next = new ListNode(6);
-        head.next.next.next = new ListNode(3);
-        head.next.next.next.next = new ListNode(4);
-        head.next.next.next.next.next = new ListNode(5);
-        head.next.next.next.next.next.next= new ListNode(6);
-        ListNode result = removeElements(head, 6);
-        while(result != null) {
-            System.out.print(result.val + " ");
-            result = result.next;
-        }
     }
     public static ListNode removeElements(ListNode head, int val) {
-        ListNode header = new ListNode(0);
-        header.next = head;
-        ListNode cur = header;
-        while(cur.next != null) {
-            if(cur.next.val == val) {
-                cur.next = cur.next.next;
+        ListNode pre = new ListNode(0);
+        pre.next = head;
+        ListNode slow = pre;
+        ListNode fast = pre.next;
+        while(fast != null) {
+            if(fast.val == val) {
+                slow.next = fast.next;
+                fast = fast.next;
             } else {
-                cur = cur.next;
+                slow = slow.next;
+                fast = fast.next;
             }
-        } 
-        return header.next;
-    }
-
-    public static class ListNode{
-        public int val;
-        public ListNode next = null;public ListNode(int val) {
-            this.val = val;
         }
+        return pre.next;
     }
 }

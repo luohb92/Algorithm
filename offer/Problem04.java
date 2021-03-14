@@ -20,30 +20,21 @@
 package offer;
 
 public class Problem04 {
-    public static void main(String[] args) {
-        int[][] array = {{1,2,8,9}, {2,4,9,12}, {4,7,10,13}, {6,8,11,15}};
-        int target = 7;
-        searchArray(array, target);
-    }
-
-    /**
-     * 由于数组每一行都按照从左到右递增的顺序排序，每一列都按照从上到下递增的顺序排序
-     * 先比较数组的最左下角的位置和target大小，如果大于target,则行数减1
-     * 否则列数加1
-     * @param array
-     * @param target
-     * @return
-     */
-    public static boolean searchArray(int[][] array, int target) {
-        int row = array.length -1;
-        int column = 0;
-        while (row >= 0 && column < array[0].length) {
-            if (array[row][column] == target) {
-                return true;
-            } else if (array[row][column] > target){
-                --row;
+    public boolean findNumberIn2DArray(int[][] matrix, int target) {
+        int n = matrix.length;
+        if(n == 0) {
+            return false;
+        }
+        int m = matrix[0].length;
+        int i = n -1;
+        int j = 0;
+        while(i >= 0 && j < m) {
+            if(matrix[i][j] > target) {
+                --i;
+            } else if(matrix[i][j] < target) {
+                ++j;
             } else {
-                ++column;
+                return true;
             }
         }
         return false;

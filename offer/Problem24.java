@@ -14,19 +14,15 @@ public class Problem24 {
     }
 
     public ListNode reverseList(ListNode head) {
-        ListNode cureNode = head;
-        ListNode preNode = null;
-        ListNode resultNode = null;
-        while (cureNode != null) {
-            ListNode next = cureNode.next;
-            if (next == null) {
-                resultNode = cureNode;
-            }
-            cureNode.next = preNode;
-            preNode = cureNode;
-            cureNode = next;
+        ListNode slow = null;
+        ListNode fast = head;
+        while(fast != null) {
+            ListNode temp = fast.next;
+            fast.next = slow;
+            slow = fast;
+            fast = temp;
         }
-        return resultNode;
+        return slow;
     }
 
 }

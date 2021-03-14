@@ -13,17 +13,15 @@ public class Problem27 {
      * 递归遍历原树的所有节点，将每个节点的左右儿子互换即可
      * @param root
      */
-    public void mirror(TreeNode root) {
+    public TreeNode mirrorTree(TreeNode root) {
         if (root == null) {
-            return;
-        }
-        if (root.left == null && root.right == null) {
-            return;
+            return null;
         }
         TreeNode temp = root.left;
         root.left = root.right;
         root.right = temp;
-        mirror(root.left);
-        mirror(root.right);
+        mirrorTree(root.left);
+        mirrorTree(root.right);
+        return root;
     }
 }

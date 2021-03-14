@@ -6,26 +6,26 @@
 package offer;
 
 public class Problem54 {
-    public static void main(String[] args) {
-
-    }
-
-    public TreeNode res;
-    public int a;
-    public TreeNode kthNode(TreeNode root, int k) {
-        a = k;
+    private int k;
+    private int res;
+    public int kthLargest(TreeNode root, int k) {
+        this.k = k;
+        helper(root);
         return res;
+
     }
 
     private void helper(TreeNode root) {
-        if (root == null) {
+        if(root == null) {
+            return;
+        }
+        helper(root.right);
+        --k;
+        if(k == 0) {
+            res = root.val;
             return;
         }
         helper(root.left);
-        if (--a == 0) {
-            res = root;
-        }
-        helper(root.right);
     }
 
 }

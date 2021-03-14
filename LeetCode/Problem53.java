@@ -22,12 +22,16 @@ public class Problem53 {
      * 最终答案为 ans=max(f(k)),0≤k<n
      */
     public int maxSubArray(int[] nums) {
-        int res = Integer.MIN_VALUE;
-        int last = 0;
-        for(int i = 0; i < nums.length; ++i) {
-            int count = Math.max(last, 0) + nums[i];
-            res = Math.max(count, res);
-            last = count;
+        int length = nums.length;
+        if(length == 1) {
+            return nums[0];
+        }
+        int[] dp = new int[length];
+        dp[0] = nums[0];
+        int res = nums[0];
+        for(int i = 1; i < length; ++i) {
+            dp[i] = Math.max(0, dp[i-1]) + nums[i];
+            res = Math.max(res, dp[i]);
         }
         return res;
     }

@@ -32,15 +32,15 @@ public class Problem199 {
         while(!queue.isEmpty()) {
             int size = queue.size();
             for(int i = 0; i < size; ++i) {
-                if(i == size -1) {
-                    res.add(queue.peek().val);
-                }
                 TreeNode node = queue.remove();
                 if(node.left != null) {
                     queue.add(node.left);
                 }
                 if(node.right != null) {
                     queue.add(node.right);
+                }
+                if(i == size -1) {
+                    res.add(node.val);
                 }
             }
         }

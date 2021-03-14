@@ -18,52 +18,7 @@ public class Problem454 {
         int[] D = {0,2};
         System.out.println(fourSumCount(A, B, C, D));
     }
-
-    /**
-     * 利用两个数组
-     * @param A
-     * @param B
-     * @param C
-     * @param D
-     * @return
-     */
     public static int fourSumCount(int[] A, int[] B, int[] C, int[] D) {
-        int count = 0;
-        Map<Integer, Integer> map1 = new HashMap<>();
-        Map<Integer, Integer> map2 = new HashMap<>();
-        for (int i = 0; i < A.length; ++i) {
-            for (int j = 0; j < B.length; ++j) {
-                int sum = A[i] + B[j];
-                if (map1.containsKey(sum)) {
-                    map1.put(sum, map1.get(sum) + 1);
-                } else {
-                    map1.put(sum, 1);
-                }
-            }
-        }
-
-        for (int i = 0; i < C.length; ++i) {
-            for (int j = 0; j < D.length; ++j) {
-                int sum = C[i] + D[j];
-                if (map2.containsKey(sum)) {
-                    map2.put(sum, map2.get(sum) + 1);
-                } else {
-                    map2.put(sum, 1);
-                }
-            }
-        }
-        Iterator<Map.Entry<Integer, Integer>> iterator =map1.entrySet().iterator();
-        while (iterator.hasNext()) {
-            Map.Entry<Integer, Integer> entry = iterator.next();
-            int key = entry.getKey();
-            if (map2.containsKey(-key)) {
-                count = count + map2.get(-key) * entry.getValue();
-            }
-        }
-        return count;
-    }
-
-    public static int fourSumCount2(int[] A, int[] B, int[] C, int[] D) {
         int count = 0;
         Map<Integer, Integer> map1 = new HashMap<>();
         for (int i = 0; i < A.length; ++i) {

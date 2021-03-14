@@ -6,10 +6,22 @@ package LeetCode;
 
 public class Problem07 {
     public static void main(String[] args) {
-
+        reverse(-123);
     }
-    public int reverse(int x) {
-
-        return 0;
+    public  static int reverse(int x) {
+        int res = 0;
+        while( x != 0) {
+            int y = x % 10;
+            System.out.println(y);
+            x = x / 10;
+            if(res > Integer.MAX_VALUE / 10) {
+                return 0;
+            }
+            if(res < Integer.MIN_VALUE / 10) {
+                return 0;
+            }
+            res = res * 10 + y;
+        }
+        return res;
     }
 }

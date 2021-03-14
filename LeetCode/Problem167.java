@@ -29,11 +29,24 @@ public class Problem167 {
     }
 
     /**
-     * 二分查找
+     * 双向指针
      */
     public int[] twoSum1(int[] numbers, int target) {
         int[] res = new int[2];
-
+        int left = 0;
+        int right = numbers.length -1;
+        while(left < right) {
+            int number = numbers[left] + numbers[right];
+            if(number == target) {
+                res[0] = left +1;
+                res[1] = right +1;
+                return res;
+            } else if(number > target) {
+                --right;
+            } else {
+                ++left;
+            }
+        }
         return res;
     }
 }

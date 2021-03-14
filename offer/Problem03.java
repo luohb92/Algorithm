@@ -15,37 +15,15 @@
 package offer;
 
 public class Problem03 {
-    public static void main(String[] args) {
-        int[] nums = {3, 1, -10, 1, 1, 4, 3, 10, 1, 1};
-        duplicateInArray(nums);
-    }
-
-    /**
-     * 首先先遍历nums数组，如果数组中某个值不在0~n-1范围之内则返回-1
-     * 这样就保证了nums数组中所有的数据都在0~n-1范围之内
-     * 然后再次遍历nums数组
-     * 当nums[i] 不等于i的时候，将i位置上的值和nums[i]位置上比较
-     * 如果相等则找到了一个重复值，如果不相等，交换i和nums[i]位置的值
-     * 知道nums[i] == i
-     * @param nums
-     * @return
-     */
-    public static int duplicateInArray(int[] nums) {
-        int length = nums.length;
-        for (int i = 0; i < length; ++i) {
-            if (nums[i] < 0 || nums[i] >= length) {
-                return -1;
-            }
-        }
-        for (int i = 0; i < length; ++i) {
-            while (nums[i] != i) {
-                if (nums[i] == nums[nums[i]]) {
+    public int findRepeatNumber(int[] nums) {
+        for(int i = 0; i < nums.length; ++i) {
+            while(i != nums[i]) {
+                if(nums[i] == nums[nums[i]]) {
                     return nums[i];
-                } else {
-                    int temp = nums[nums[i]];
-                    nums[nums[i]] = nums[i];
-                    nums[i] = temp;
                 }
+                int temp = nums[i];
+                nums[i] = nums[temp];
+                nums[temp] = temp;
             }
         }
         return -1;

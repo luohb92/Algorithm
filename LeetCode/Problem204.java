@@ -10,30 +10,18 @@ public class Problem204 {
 
     }
     public int countPrimes(int n) {
-        boolean[] isPrime = new boolean[n];
-        Arrays.fill(isPrime, true);
-        for (int i = 2; i < n; ++i) {
-            if (isPrime[i]) {
-                for (int j = i * 2; j < n ; j = j +i) {
-                    isPrime[j] = false;
-                }
+        int res = 0;
+        for(int i = 2; i < n; ++i) {
+            if(helper(i)) {
+                res = res + 1;
             }
         }
-        int count = 0;
-        for (int i = 2; i < n; ++i) {
-            if (isPrime[i]) {
-                ++count;
-            }
-        }
-        return count;
+        return res;
     }
 
-    public boolean isPrimes(int n) {
-        if (n <=3) {
-            return n > 1;
-        }
-        for (int i = 2; i <= Math.sqrt(n); ++i) {
-            if (n % i == 0) {
+    private boolean helper(int n) {
+        for(int i = 2; i * i <= n; ++i) {
+            if(n % i == 0) {
                 return false;
             }
         }

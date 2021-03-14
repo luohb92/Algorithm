@@ -10,22 +10,19 @@ public class Problem169 {
     }
 
     public int majorityElement(int[] nums) {
-        int num = 0;
-        Map<Integer, Integer> map = new HashMap<>();
-        for (int i = 0; i < nums.length; ++i) {
-            if (map.containsKey(nums[i])) {
-                map.put(nums[i], map.get(nums[i]) + 1);
+        int count = 1;
+        int res = nums[0];
+        for (int i = 1; i < nums.length; ++i) {
+            if (res == nums[i]) {
+                ++count;
             } else {
-                map.put(nums[i], 1);
+                --count;
+            }
+            if (count == 0) {
+                res = nums[i];
+                count = 1;
             }
         }
-        Iterator<Map.Entry<Integer, Integer>> iterator = map.entrySet().iterator();
-        while (iterator.hasNext()) {
-            Map.Entry<Integer, Integer> entry = iterator.next();
-            if (entry.getValue() > nums.length / 2) {
-                num =  entry.getKey();
-            }
-        }
-        return num;
+        return res;
     }
 }
