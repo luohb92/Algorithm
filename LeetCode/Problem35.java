@@ -5,16 +5,6 @@
 package LeetCode;
 
 public class Problem35 {
-    public static void main(String[] args) {
-
-    }
-
-    /**
-     * 二分查找法
-     * @param nums
-     * @param target
-     * @return
-     */
     public int searchInsert(int[] nums, int target) {
         int l = 0, r = nums.length;
         while (l < r) {

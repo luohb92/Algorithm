@@ -6,9 +6,6 @@ import java.util.List;
 public class Problem77 {
     static List<List<Integer>> res = new ArrayList<>();
     static List<Integer> path = new ArrayList<>();
-    public static void main(String[] args) {
-        combine(4, 2);
-    }
 
     public static List<List<Integer>> combine(int n, int k) {
         backtracking(n , k, 1);
@@ -17,7 +14,7 @@ public class Problem77 {
 
     private static void  backtracking(int n, int k, int start){
         if(path.size() == k) {
-            res.add(path);
+            res.add(new ArrayList<>(path));
             return;
         }
         for(int i = start; i <= n; ++i) {

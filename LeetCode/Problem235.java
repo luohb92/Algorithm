@@ -4,7 +4,5 @@
 package LeetCode;
 
 public class Problem235 {
-    public static void main(String[] args) {
 
-    }
 }

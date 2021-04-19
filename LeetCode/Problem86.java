@@ -8,11 +8,24 @@
 package LeetCode;
 
 public class Problem86 {
-    public static void main(String[] args) {
-
-    }
 
     public ListNode partition(ListNode head, int x) {
-        return head;
-    }
+            ListNode minHead = new ListNode(0);
+            ListNode maxHead = new ListNode(0);
+            ListNode min = minHead;
+            ListNode max = maxHead;
+            while(head != null) {
+                if(head.val < x) {
+                    min.next = head;
+                    min = min.next;
+                } else {
+                    max.next = head;
+                    max = max.next;
+                }
+                head = head.next;
+            }
+            max.next = null;
+            min.next = maxHead.next;
+            return minHead.next;
+        }
 }
