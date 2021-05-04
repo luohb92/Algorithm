@@ -7,12 +7,31 @@
  */
 package LeetCode;
 
-public class Problem202 {
-    public static void main(String[] args) {
+import java.util.HashSet;
+import java.util.Set;
 
+public class Problem202 {
+    public boolean isHappy(int n) {
+        Set<Integer> set = new HashSet<>();
+        set.add(n);
+        while(n != 1) {
+            n = helper(n);
+            if(set.contains(n)) {
+                return false;
+            }
+            set.add(n);
+        }
+        return true;
     }
 
-//    public boolean isHappy(int n) {
-//
-//    }
+    private int helper(int n) {
+        int sum = 0;
+        int m = 0;
+        while(n != 0) {
+            m = n % 10;
+            n /= 10;
+            sum += m * m;
+        }
+        return sum;
+    }
 }

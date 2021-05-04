@@ -22,9 +22,6 @@
 package LeetCode;
 
 public class Problem209 {
-    public static void main(String[] args) {
-
-    }
 
     public int minSubArrayLen(int s, int[] nums) {
         int res = Integer.MAX_VALUE;

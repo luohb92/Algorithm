@@ -7,10 +7,6 @@ import java.lang.reflect.Array;
 import java.util.*;
 
 public class Problem349 {
-    public static void main(String[] args) {
-
-    }
-
     public int[] intersection(int[] nums1, int[] nums2) {
         List<Integer> list = new ArrayList<>();
         Set<Integer> set = new HashSet<>();

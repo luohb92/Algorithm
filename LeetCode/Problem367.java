@@ -1,21 +1,18 @@
 package LeetCode;
 
 public class Problem367 {
-    public static void main(String[] args) {
-
-    }
-
     public boolean isPerfectSquare(int num) {
-        long low = 1;
-        long high = num;
-        while (low <= high) {
-            long mid = low + (high - low) / 2;
-            if (mid * mid == num) {
-                return true;
-            } else if (mid * mid < num) {
-                low = mid + 1;
+        long left = 1;
+        long right = num;
+        while(left <= right) {
+            long mid = left + ((right - left) >> 1);
+            long sum = mid * mid;
+            if(sum > num) {
+                right = mid -1;
+            } else if(sum < num) {
+                left = mid + 1;
             } else {
-                high = mid -1;
+                return true;
             }
         }
         return false;

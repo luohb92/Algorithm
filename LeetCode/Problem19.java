@@ -6,10 +6,6 @@
  */
 package LeetCode;
 public class Problem19 {
-    public static void main(String[] args) {
-        
-    }
-
     /**
      * 快慢指针法
      * 先设置一个头pre, pre的next等于head
@@ -26,14 +22,14 @@ public class Problem19 {
         ListNode pre = new ListNode(0);
         pre.next = head;
         ListNode slow = pre;
-        ListNode fast = pre;
+        ListNode fast = head;
         while(n != 0) {
             fast = fast.next;
             --n;
         }
-        while(fast.next != null) {
-            slow = slow.next;
+        while(fast != null) {
             fast = fast.next;
+            slow = slow.next;
         }
         slow.next = slow.next.next;
         return pre.next;

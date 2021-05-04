@@ -8,8 +8,7 @@
  */
 package LeetCode;
 public class Problem203 {
-    public static void main(String[] args) {
-    }
+
     public static ListNode removeElements(ListNode head, int val) {
         ListNode pre = new ListNode(0);
         pre.next = head;

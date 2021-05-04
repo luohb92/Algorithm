@@ -2,14 +2,11 @@ package LeetCode;
 
 public class Problem142 {
     public ListNode detectCycle(ListNode head) {
-        if(head == null) {
-            return head;
-        }
+        ListNode slow = head;
         ListNode fast = helper(head);
         if(fast == null) {
             return null;
         }
-        ListNode slow = head;
         while(slow != fast) {
             slow = slow.next;
             fast = fast.next;
@@ -24,7 +21,7 @@ public class Problem142 {
             slow = slow.next;
             fast = fast.next.next;
             if(slow == fast) {
-                return fast;
+                return slow;
             }
         }
         return null;

@@ -3,15 +3,7 @@
  * 给定两个字符串 s 和 t ，编写一个函数来判断 t 是否是 s 的字母异位词
  */
 package LeetCode;
-
-import java.util.*;
-
 public class Problem242 {
-    public static void main(String[] args) {
-        List<Integer> res = new ArrayList<>();
-        res.size();
-    }
-
     public boolean isAnagram1(String s, String t) {
         if (s.length() != t.length()) {
             return false;

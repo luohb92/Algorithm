@@ -7,10 +7,6 @@
 package LeetCode;
 
 public class Problem283 {
-    public static void main(String[] args) {
-
-    }
-
     public void moveZeroes(int[] nums) {
         for (int i = 0, j = 0; j < nums.length; ++j) {
             if (nums[j] != 0) {

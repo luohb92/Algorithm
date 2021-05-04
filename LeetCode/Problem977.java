@@ -1,7 +1,4 @@
 package LeetCode;
-
-import java.util.Arrays;
-
 public class Problem977 {
     public int[] sortedSquares(int[] nums) {
         int[] res = new int[nums.length];
