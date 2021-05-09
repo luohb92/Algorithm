@@ -4,10 +4,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Problem1189 {
-    public static void main(String[] args) {
-
-    }
-
     public int maxNumberOfBalloons(String text) {
         Map<Character, Integer> map = new HashMap<>();
         for (int i = 0; i < text.length(); ++i) {

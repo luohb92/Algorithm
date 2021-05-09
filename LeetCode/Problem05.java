@@ -4,11 +4,6 @@
 package LeetCode;
 
 public class Problem05 {
-    public static void main(String[] args) {
-        String s = "babadada";
-        System.out.println(longestPalindrome(s));
-    }
-
     public static String longestPalindrome(String s) {
         String str="";
         for (int i = 0; i < s.length(); ++i) {

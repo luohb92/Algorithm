@@ -8,10 +8,6 @@ import java.util.Map;
 import java.util.Set;
 import java.util.HashSet;
 public class Problem03 {
-    public static void main(String[] args) {
-        String s = "abcabcaa";
-        System.out.println(lengthOfLongestSubstring(s));
-    }
     /**
      * 暴力解法
      * @return

@@ -10,10 +10,6 @@ import java.util.List;
 import java.util.Queue;
 
 public class Problem199 {
-    public static void main(String[] args) {
-
-    }
-
     /**
      * bfs层次遍历
      * 每次只拿这一层最右边的那个值
@@ -27,6 +23,7 @@ public class Problem199 {
         if(root == null) {
             return res;
         }
+
         Queue<TreeNode> queue = new LinkedList<>();
         queue.add(root);
         while(!queue.isEmpty()) {

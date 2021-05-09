@@ -11,13 +11,6 @@ import java.util.Iterator;
 import java.util.Map;
 
 public class Problem454 {
-    public static void main(String[] args) {
-        int[] A = {1,2};
-        int[] B = {-2,-1};
-        int[] C = {-1,2};
-        int[] D = {0,2};
-        System.out.println(fourSumCount(A, B, C, D));
-    }
     public static int fourSumCount(int[] A, int[] B, int[] C, int[] D) {
         int count = 0;
         Map<Integer, Integer> map1 = new HashMap<>();

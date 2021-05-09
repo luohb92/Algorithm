@@ -8,10 +8,6 @@
 package LeetCode;
 
 public class Problem167 {
-    public static void main(String[] args) {
-
-    }
-
     /**
      * 暴力解法
      */

@@ -1,12 +1,6 @@
 package LeetCode;
 
 public class Problem33 {
-    public static void main(String[] args) {
-        int[] nums = {4,5,6,7,0,1,2};
-        int target = 0;
-        System.out.println(search(nums, target));
-    }
-
     public static int search(int[] nums, int target) {
         if(nums == null || nums.length == 0) {
             return -1;
@@ -16,7 +10,6 @@ public class Problem33 {
         while(nums[0] > nums[index] && nums[0] > nums[index -1]) {
             --index;
         }
-        System.out.println(index);
         int left, right;
         if(nums[0] <= target && nums[index -1] >= target) {
             left = 0;
@@ -27,8 +20,7 @@ public class Problem33 {
         } else {
             return -1;
         }
-        System.out.println(left);
-        System.out.println(right);
+
         while(left < right) {
             int mid = (left + right) >>> 1;
             if(nums[mid] < target) {

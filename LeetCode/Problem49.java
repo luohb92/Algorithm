@@ -15,9 +15,6 @@ package LeetCode;
 import java.util.*;
 
 public class Problem49 {
-    public static void main(String[] args) {
-
-    }
 
     public List<List<String>> groupAnagrams(String[] strs) {
         Map<String, List> map = new HashMap<>();

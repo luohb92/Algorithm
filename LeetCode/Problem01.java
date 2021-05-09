@@ -9,11 +9,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Problem01 {
-    public static void main(String[] args) {
-        int[] nums = new int[]{3, 3};
-        twoSum2(nums, 6);
-    }
-
     /**
      * 暴力解法
      * 两次遍历，如果两个数相加等于target就返回

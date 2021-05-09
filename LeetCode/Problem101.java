@@ -4,10 +4,6 @@
 package LeetCode;
 import java.util.Stack;
 public class Problem101 {
-    public static void main(String[] args) {
-        
-    }
-
     /**
      * 递归写法
      * 一个二叉树是镜像对称则必须满足以下三点

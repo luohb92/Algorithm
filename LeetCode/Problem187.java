@@ -6,11 +6,6 @@ import java.util.List;
 import java.util.Map;
 
 public class Problem187 {
-    public static void main(String[] args) {
-        String s = "AAAAAAAAAAAA";
-        findRepeatedDnaSequences(s);
-    }
-
     public static List<String> findRepeatedDnaSequences(String s) {
         Map<String, Integer> map = new HashMap<>();
         List<String> list = new ArrayList<>();
