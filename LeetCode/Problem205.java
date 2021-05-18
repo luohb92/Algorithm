@@ -11,10 +11,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Problem205 {
-    public static void main(String[] args) {
-
-    }
-
     public boolean isIsomorphic(String s, String t) {
         Map<Character, Character> map = new HashMap<>();
         for (int i = 0; i < s.length(); ++i) {

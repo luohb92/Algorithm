@@ -8,10 +8,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Problem257 {
-    public static void main(String[] args) {
-
-    }
-
     /**
      * 递归写法
      * @param root

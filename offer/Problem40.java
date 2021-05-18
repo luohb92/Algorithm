@@ -13,16 +13,12 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Problem40 {
-    public static void main(String[] args) {
-
-    }
-
-    public List<Integer> getLeastNumbers_Solution(int [] input, int k) {
-        Arrays.sort(input);
-        List<Integer> list = new ArrayList<>();
-        for (int i = 0; i < k; ++i) {
-            list.add(input[i]);
+    public int[] getLeastNumbers(int[] arr, int k) {
+        int[] res = new int[k];
+        Arrays.sort(arr);
+        for(int i = 0; i < k; ++i) {
+            res[i] = arr[i];
         }
-        return list;
+        return res;
     }
 }
