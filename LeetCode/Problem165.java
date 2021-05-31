@@ -8,14 +8,6 @@
 package LeetCode;
 
 public class Problem165 {
-    public static void main(String[] args) {
-        String version1 = "1";
-        String version2 = "1.1";
-        String test = version1.substring(0,1);
-        System.out.println(test);
-//        System.out.println(compareVersion(version1, version2));
-    }
-
     public static int compareVersion(String version1, String version2) {
         int i = 0, j = 0;
         while (i < version1.length() || j < version2.length()) {

@@ -23,10 +23,6 @@ import java.util.Set;
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
 public class Problem0104 {
-    public static void main(String[] args) {
-
-    }
-
     /**
      * 每个字符出现的次数为偶数, 或者有且只有一个字符出现的次数为奇数时, 是回文的排列
      * @param s
@@ -34,9 +30,27 @@ public class Problem0104 {
      */
     public boolean canPermutePalindrome(String s) {
         Set<Character> set = new HashSet<>();
-        for (int i = 0; i < s.length(); ++i) {
-
+        for(char a : s.toCharArray()) {
+            if(set.contains(a)) {
+                set.remove(a);
+            } else {
+                set.add(a);
+            }
         }
-        return false;
+        return set.size() <= 1;
+    }
+
+    public boolean canPermutePalindrome1(String s) {
+        int[] map = new int[128];
+        int res = 0;
+        for(char a: s.toCharArray()) {
+            int count = ++map[a];
+            if (count % 2 == 0){
+                --res;
+            } else {
+                ++res;
+            }
+        }
+        return res <= 1;
     }
 }
