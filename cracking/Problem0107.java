@@ -1,6 +1,6 @@
-package LeetCode;
+package cracking;
 
-public class Problem48 {
+public class Problem0107 {
     /**
      * 先按照对角线交换，然后按照中轴线交换
      * @param matrix
@@ -8,7 +8,7 @@ public class Problem48 {
     public void rotate(int[][] matrix) {
         for(int i = 0; i < matrix.length; ++i) {
             for(int j = 0; j <= i; ++j) {
-                if(i ==j) {
+                if(i == j) {
                     continue;
                 }
                 int temp = matrix[i][j];
