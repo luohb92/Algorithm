@@ -3,10 +3,6 @@ package cracking;
 import java.util.HashSet;
 
 public class Problem0207 {
-    public static void main(String[] args) {
-
-    }
-
     /**
      * 空间复杂度O(1)
      * 时间复杂度O(n)

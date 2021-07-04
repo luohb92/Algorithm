@@ -3,10 +3,6 @@ package cracking;
 import java.util.HashSet;
 
 public class Problem0201 {
-    public static void main(String[] args) {
-
-    }
-
     /**
      * 遍历链表用一个set保存遍历的值
      * 使用快慢指针

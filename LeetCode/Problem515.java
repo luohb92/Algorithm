@@ -10,10 +10,6 @@ import java.util.List;
 import java.util.Queue;
 
 public class Problem515 {
-    public static void main(String[] args) {
-
-    }
-
     /**
      * bfs层次遍历
      * 遍历每层的值，找出每一层最大的值

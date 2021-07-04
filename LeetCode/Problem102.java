@@ -7,10 +7,6 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 public class Problem102 {
-    public static void main(String[] args) {
-       
-    }
-
     /**
      * 层次遍历，利用队列保存每层的数据
      * 队列的长度就是每层数据的个数

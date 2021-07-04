@@ -1,11 +1,6 @@
 package LeetCode;
 
 public class Problem91 {
-
-    public static void main(String[] args) {
-
-    }
-
     public int numDecodings(String s) {
         int length = s.length();
         int[] dp = new int[length + 1];

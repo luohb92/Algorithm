@@ -5,11 +5,8 @@ import java.util.List;
 import java.util.Queue;
 
 public class Problem104 {
-    public static void main(String[] args) {
-        
-    }
     public int maxDepth(TreeNode root) {
-        List<List<Integer>> res = new ArrayList<>();
+        int depth = 0;
         if(root == null) {
             return 0;
         }
@@ -17,6 +14,7 @@ public class Problem104 {
         queue.add(root);
         while(!queue.isEmpty()) {
             int size = queue.size();
+            ++depth;
             List<Integer> list = new ArrayList<>();
             for(int i = 0; i < size; ++i) {
                 root = queue.remove();
@@ -26,11 +24,9 @@ public class Problem104 {
                 if(root.right != null) {
                     queue.add(root.right);
                 }
-                list.add(root.val);
             }
-            res.add(list);
         }
-        return res.size();
+        return depth;
     }
     
     /**

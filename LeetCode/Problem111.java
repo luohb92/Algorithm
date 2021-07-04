@@ -5,9 +5,6 @@
  */
 package LeetCode;
 public class Problem111 {
-    public static void main(String[] args) {
-        
-    }
     /**
      * 递归解法
      * 当root节点左右子树都为空的时候返回1
@@ -20,13 +17,13 @@ public class Problem111 {
         if(root == null) {
             return 0;
         }
-        if(root.left == null && root.right == null) {
-            return 1;
-        }
         int leftDepth = minDepth(root.left);
         int rightDepth = minDepth(root.right);
-        if(root.left == null || root.right == null) {
-            return leftDepth + rightDepth + 1;
+        if(root.left == null) {
+            return rightDepth + 1;
+        }
+        if(root.right == null) {
+            return leftDepth + 1;
         }
         return Math.min(leftDepth, rightDepth) + 1;
     }

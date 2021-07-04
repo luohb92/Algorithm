@@ -6,11 +6,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
+/**
+ * 给定一个二叉树的根节点 root ，返回它的 中序 遍历。
+ */
 public class Problem94 {
-    public static void main(String[] args) {
-        
-    }
-
     /**
      * 递归写法
      * @param root

@@ -6,11 +6,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
+/**
+ * 给你二叉树的根节点 root ，返回它节点值的 前序 遍历。
+ */
 public class Problem144 {
-    public static void main(String[] args) {
-
-    }
-
     public List<Integer> preorderTraversal(TreeNode root) {
         List<Integer> result = new ArrayList<>();
         helper(result, root);

@@ -4,12 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Problem0206 {
-    public static void main(String[] args) {
-        ListNode head = new ListNode(1);
-        head.next = new ListNode(1);
-        System.out.println(isPalindrome(head));
-    }
-
     /**
      * 时间复杂度O(n)
      * 空间复杂度O(n)

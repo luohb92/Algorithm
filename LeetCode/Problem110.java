@@ -5,10 +5,6 @@
  */
 package LeetCode;
 public class Problem110 {
-    public static void main(String[] args) {
-        
-    }
-
     public boolean isBalanced(TreeNode root) {
         if(root == null) {
             return true;

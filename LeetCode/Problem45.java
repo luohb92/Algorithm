@@ -1,6 +1,10 @@
 package LeetCode;
 
 public class Problem45 {
+    /**
+     * 贪心算法
+     *
+     */
     public int jump(int[] nums) {
         int end = 0;
         int res = 0;

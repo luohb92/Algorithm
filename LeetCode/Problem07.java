@@ -5,9 +5,6 @@
 package LeetCode;
 
 public class Problem07 {
-    public static void main(String[] args) {
-        reverse(-123);
-    }
     public  static int reverse(int x) {
         int res = 0;
         while( x != 0) {

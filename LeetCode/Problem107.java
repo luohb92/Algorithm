@@ -9,10 +9,6 @@ import java.util.List;
 import java.util.Queue;
 import java.util.Stack;
 public class Problem107 {
-    public static void main(String[] args) {
-        
-    }
-
     public List<List<Integer>> levelOrderBottom(TreeNode root) {
         List<List<Integer>> res = new ArrayList<>();
         if(root == null) {

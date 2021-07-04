@@ -6,10 +6,6 @@ import java.util.List;
 import java.util.Queue;
 
 public class Problem637 {
-    public static void main(String[] args) {
-
-    }
-
     public List<Double> averageOfLevels(TreeNode root) {
         List<Double> res = new ArrayList<>();
         if(root == null) {

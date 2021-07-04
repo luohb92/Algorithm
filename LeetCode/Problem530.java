@@ -4,10 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Problem530 {
-    public static void main(String[] args) {
-
-    }
-
     TreeNode pre;
     int res = Integer.MAX_VALUE;
     public int getMinimumDifference(TreeNode root) {

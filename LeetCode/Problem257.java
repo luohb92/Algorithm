@@ -15,20 +15,20 @@ public class Problem257 {
      */
     public List<String> binaryTreePaths(TreeNode root) {
         List<String> paths = new ArrayList<>();
-        help(root, "", paths);
+        dfs(root, "", paths);
         return paths;
     }
 
-    public void help(TreeNode root , String path, List<String> paths) {
-        if (root != null) {
-            path = path + Integer.toString(root.val);
-            if (root.left == null && root.right == null) {
-                paths.add(path);
-            } else {
-                path = path + "->";
-                help(root.left, path, paths);
-                help(root.right, path, paths);
-            }
+    private void dfs(TreeNode root, String path, List<String> res){
+        if(root == null) {
+            return;
         }
+        path += root.val;
+        if(root.left == null && root.right == null) {
+            res.add(path);
+            return;
+        }
+        dfs(root.left, path + "->", res);
+        dfs(root.right, path + "->", res);
     }
 }

@@ -5,10 +5,6 @@
 package LeetCode;
 
 public class Problem09 {
-    public static void main(String[] args) {
-
-    }
-
     /**
      * 首先负数肯定不是回文数
      * 将x反转，如果反转后的值和x相等，则是回文数

@@ -1,9 +1,6 @@
 package cracking;
 
 public class Problem0202 {
-    public static void main(String[] args) {
-    }
-
     public int kthToLast(ListNode head, int k) {
         ListNode slow = head;
         ListNode fast = head;

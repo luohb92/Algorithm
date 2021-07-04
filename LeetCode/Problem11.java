@@ -1,10 +1,6 @@
 package LeetCode;
 
 public class Problem11 {
-    public static void main(String[] args) {
-
-    }
-
     public int maxArea(int[] height) {
         int l = 0;
         int r = height.length -1;
