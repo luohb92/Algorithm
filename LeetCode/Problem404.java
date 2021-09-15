@@ -8,15 +8,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Problem404 {
-    public static void main(String[] args) {
-        TreeNode root = new TreeNode(3);
-        root.left = new TreeNode(9);
-        TreeNode right = new TreeNode(20);
-        right.left = new TreeNode(15);
-        right.right = new TreeNode(7);
-        root.right = right;
-    }
-
     public int sumOfLeftLeaves(TreeNode root) {
         if(root == null) {
             return 0;

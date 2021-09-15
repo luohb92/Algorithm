@@ -2,10 +2,6 @@
 package offer;
 
 public class Problem18 {
-    public static void main(String[] args) {
-
-    }
-
     public ListNode deleteNode(ListNode head, int val) {
         ListNode pre = new ListNode(0);
         pre.next = head;

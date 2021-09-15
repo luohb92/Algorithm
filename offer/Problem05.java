@@ -7,6 +7,11 @@
 package offer;
 
 public class Problem05 {
+    /**
+     * 遍历过程中添加
+     * 时间复杂度O(n)
+     * 空间复杂度O(n)
+     */
     public String replaceSpace(String s) {
         StringBuilder res = new StringBuilder();
         for(int i = 0; i < s.length(); ++i) {
@@ -19,4 +24,5 @@ public class Problem05 {
         }
         return res.toString();
     }
+
 }

@@ -17,16 +17,9 @@
 package offer;
 
 public class Problem22 {
-    public static void main(String[] args) {
-
-    }
-
     /**
      * 快慢指针
      * 两个指针slow和fast，
-     * @param head
-     * @param k
-     * @return
      */
     public ListNode getKthFromEnd(ListNode head, int k) {
         ListNode slow = head;

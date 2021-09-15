@@ -4,6 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Problem530 {
+    /**
+     * 二查搜索树中序遍历，是递增的
+     * 
+     */
     TreeNode pre;
     int res = Integer.MAX_VALUE;
     public int getMinimumDifference(TreeNode root) {

@@ -11,10 +11,6 @@
 package offer;
 
 public class Problem42 {
-    public static void main(String[] args) {
-
-    }
-
     /**
      * max记录当前最大值
      * sum记录当前累加的数值

@@ -7,10 +7,7 @@
 package offer;
 
 public class Problem28 {
-    public static void main(String[] args) {
-
-    }
-
+    
     public boolean isSymmetric(TreeNode root) {
         if(root == null) {
             return true;

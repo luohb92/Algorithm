@@ -5,10 +5,6 @@
  */
 package LeetCode;
 public class Problem234 {
-    public static void main(String[] args) {
-        
-    }
-
     /**
      * 快慢指针，
      * 先使用快慢指针，查到ListNode的中间

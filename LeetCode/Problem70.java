@@ -6,9 +6,6 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class Problem70 {
-    public static void main(String[] args) {
-
-    }
     public int climbStairs(int n) {
         if(n == 1) {
             return 1;

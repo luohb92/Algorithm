@@ -5,10 +5,6 @@
  */
 package LeetCode;
 public class Problem876 {
-    public static void main(String[] args) {
-        
-    }
-
     /**
      * 先获取链表的长度，求的长度的一半
      * 

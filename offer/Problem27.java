@@ -5,10 +5,6 @@
 package offer;
 
 public class Problem27 {
-    public static void main(String[] args) {
-
-    }
-
     /**
      * 递归遍历原树的所有节点，将每个节点的左右儿子互换即可
      * @param root

@@ -7,6 +7,11 @@
 package LeetCode;
 
 public class Problem53 {
+    /**
+     * 动态规划
+     * 线性dp问题
+     * dp[n]表示nums[n]为结尾，最大和的连续子数组
+     */
     public int maxSubArray(int[] nums) {
         int[] dp = new int[nums.length];
         dp[0] = nums[0];

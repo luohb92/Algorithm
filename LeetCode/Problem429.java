@@ -6,10 +6,6 @@ import java.util.List;
 import java.util.Queue;
 
 public class Problem429 {
-    public static void main(String[] args) {
-
-    }
-
     public List<List<Integer>> levelOrder(Node root) {
         List<List<Integer>> res = new ArrayList<>();
         if(root == null) {

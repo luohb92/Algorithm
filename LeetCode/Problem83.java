@@ -6,10 +6,6 @@
  */
 package LeetCode;
 public class Problem83 {
-    public static void main(String[] args) {
-        
-    }
-
     /**
      * 使用快慢指针
      * 慢指针slow初始化为head,快指针初始化为head.next

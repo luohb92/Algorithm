@@ -6,14 +6,6 @@
  */
 package LeetCode;
 public class Problem24 {
-    public static void main(String[] args) {
-        ListNode head = new ListNode(1);
-        head.next = new ListNode(2);
-        head.next.next = new ListNode(3);
-        head.next.next.next = new ListNode(4);
-        swapPairs(head);
-    }
-
     public static ListNode swapPairs(ListNode head) {
         ListNode pre = new ListNode(0);
         pre.next = head;

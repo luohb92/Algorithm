@@ -8,9 +8,6 @@
  */
 package LeetCode;
 public class Problem92 {
-    public static void main(String[] args) {
-        
-    }
     public ListNode reverseBetween(ListNode head, int m, int n) {
         ListNode slow = null;
         ListNode fast = head;

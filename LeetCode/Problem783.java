@@ -5,31 +5,23 @@
 package LeetCode;
 
 public class Problem783 {
-    public static void main(String[] args) {
-        TreeNode root = new TreeNode(99);
-        root.left = new TreeNode(84);
-        root.left.left = new TreeNode(27);
-        root.left.left.left = new TreeNode(1);
-        root.left.left.right = new TreeNode(53);
-    }
-
-    Integer pre = null;
-    int min = Integer.MAX_VALUE;
+    TreeNode pre;
+    int res = Integer.MAX_VALUE;
     public int minDiffInBST(TreeNode root) {
-        dfs(root);
-        return min;
+        helper(root);
+        return res;
     }
 
-    public void dfs(TreeNode root) {
-        if (root == null) {
+    public void helper(TreeNode root) {
+        if(root == null) {
             return;
         }
-        dfs(root.left);
-        if (pre != null) {
-            min = Math.min(min, root.val - pre);
+        helper(root.left);
+        if(pre != null) {
+            res = Math.min(res, root.val - pre.val);
         }
-        pre = root.val;
-        dfs(root.right);
+        pre = root;
+        helper(root.right);
 
     }
 }

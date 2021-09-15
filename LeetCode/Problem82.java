@@ -4,9 +4,6 @@
 package LeetCode;
 
 public class Problem82 {
-    public static void main(String[] args) {
-
-    }
     public ListNode deleteDuplicates(ListNode head) {
         if (head == null || head.next == null) {
             return head;

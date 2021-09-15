@@ -5,6 +5,9 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * 给定一个字符串，请将字符串里的字符按照出现的频率降序排列
+ */
 public class Problem451 {
     public String frequencySort(String s) {
         int[][] cnts = new int[128][2];

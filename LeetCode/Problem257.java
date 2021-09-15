@@ -26,7 +26,6 @@ public class Problem257 {
         path += root.val;
         if(root.left == null && root.right == null) {
             res.add(path);
-            return;
         }
         dfs(root.left, path + "->", res);
         dfs(root.right, path + "->", res);

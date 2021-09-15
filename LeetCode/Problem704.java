@@ -1,5 +1,8 @@
 package LeetCode;
 
+/**
+ * 二分查找
+ */
 public class Problem704 {
     public int search(int[] nums, int target) {
         int left = 0;

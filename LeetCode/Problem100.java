@@ -1,9 +1,5 @@
 package LeetCode;
 public class Problem100 {
-    public static void main(String[] args) {
-        
-    }
-
     /**
      * 递归解法
      * 先判断p q如果都为null的时候则返回true
