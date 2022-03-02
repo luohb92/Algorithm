@@ -1,6 +1,13 @@
 package LeetCode;
 
 public class Problem142 {
+    /**
+     * 先找到相遇的节点
+     * 然后一步一步遍历
+     * 遍历相等时候就是环的入口
+     * @param head
+     * @return
+     */
     public ListNode detectCycle(ListNode head) {
         ListNode slow = head;
         ListNode fast = helper(head);

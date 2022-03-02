@@ -1,8 +1,5 @@
 package offer;
 public class Problem01 {
-    public static void main(String[] args) {
-        
-    }
 
     public boolean Find(int target, int [][] array) {
         int row = array.length;
