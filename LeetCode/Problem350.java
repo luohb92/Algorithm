@@ -6,9 +6,6 @@ import java.util.List;
 import java.util.Map;
 
 public class Problem350 {
-    public static void main(String[] args) {
-
-    }
 
     public int[] intersect(int[] nums1, int[] nums2) {
         Map<Integer, Integer> map = new HashMap<>();
