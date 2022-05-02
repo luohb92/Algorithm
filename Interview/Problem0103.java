@@ -9,10 +9,6 @@ import java.util.Stack;
  * 但是只能用递归函数来实现，不能用其他数据结构
  */
 public class Problem0103 {
-    public static void main(String[] args) {
-
-    }
-
     public static void reverse(Stack<Integer> stack) {
         if (stack.isEmpty()) {
             return;

@@ -1,9 +1,5 @@
 package offer;
 public class Problem02 {
-    public static void main(String[] args) {
-        
-    }
-
     public String replaceSpace(StringBuffer str) {
         int length = str.length();
         int spaceSize = 0;
